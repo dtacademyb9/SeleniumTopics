@@ -35,7 +35,7 @@ public class WarmUp {
 
 
         //Go to dice.com
-        // Search for SDET in Washington DC
+
 
 
 
@@ -45,12 +45,16 @@ public class WarmUp {
         String location = "Washington DC";
 
 
+
+        // Assert that url and title is correct
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.dice.com/");
 
         Assert.assertEquals(driver.getTitle(), "Find Jobs in Technology");
 
         Assert.assertTrue(driver.getTitle().contains("Find Jobs"));
 
+
+        // Search for SDET in Washington DC
         driver.findElement(By.id("typeaheadInput")).sendKeys(term);
         driver.findElement(By.id("google-location-search")).sendKeys(location);
         driver.findElement(By.xpath("//button[@id='submitSearch-button']")).click();
