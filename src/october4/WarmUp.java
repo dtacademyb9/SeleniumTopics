@@ -46,6 +46,8 @@ public class WarmUp {
         //Check apple checkbox
 
         //ElementClickInterceptedException: element click intercepted: Element <input type="checkbox" name="" value=""> is not clickable at point (217, 679). Other element would receive the click
+        //This exception happens usually when one element is covered by another element, and the other element would get the click. Solution: if the element that is on top of the element lets you click, locate that
+        // and click. IF you still need to click the element underneath, you will need to use JavascriptExecutor interface's click() method
 
         driver.findElement(By.xpath("//li[@id='p_89/Apple']//i")).click();
 //
